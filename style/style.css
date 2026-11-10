@@ -195,7 +195,7 @@ p{
     object-fit: cover;
 }
 
-/* Постоянный фон */
+
 
 .hero-slider {
     width: 100%;
@@ -205,9 +205,9 @@ p{
     margin-bottom: 100px;
 }
 
-/* Обложка книги */
 
-/* Контейнер для карусели */
+
+
 
 .book-carousel {
     position: absolute;
@@ -226,7 +226,7 @@ p{
     z-index: 1;
 }
 
-/* Книга в центре */
+
 
 .book-cover.center {
     transform: translate(-50%, -50%) scale(1.1);
@@ -234,14 +234,14 @@ p{
     z-index: 3;
 }
 
-/* Книга справа */
+
 
 .book-cover.right {
     transform: translate(50%, -50%) scale(0.75);
     opacity: 0.6;
     z-index: 2;
 }
-/* Название книги */
+
 
 .slide-content {
     position: absolute;
@@ -267,7 +267,7 @@ p{
     font-size: 20px;
 }
 
-/* Обложка книги */
+
 .book-cover {
     position: absolute;
     width: 340px;
@@ -288,7 +288,7 @@ p{
     margin: 15px;
 }
 
-/* List of Works */
+
 
 #list {
     max-width: 1000px;
