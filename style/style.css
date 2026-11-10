@@ -178,7 +178,7 @@ p{
     }
     #links { margin-top: 60px; 
     margin-bottom: 60px;}
-/* Главный экран */
+
 
 .hero-slider {
     width: 100%;
@@ -188,7 +188,6 @@ p{
 }
 
 
-/* Фоновая фотография */
 
 .background {
     width: 100%;
@@ -453,7 +452,7 @@ footer {
 }
 
 footer p {
-   font-family: 'Allura', cursive;
+   font-family: 'Great Vibes', cursive;
     font-size: 20px;
     color: #283D32;
     margin: 8px 0;
