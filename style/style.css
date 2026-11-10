@@ -453,15 +453,12 @@ footer {
 
 footer p {
    font-family: 'Great Vibes', cursive;
+  font-style: italic;
     font-size: 20px;
     color: #283D32;
     margin: 8px 0;
 }
-footer p:nth-child(3) {
-    font-family: 'Allura', cursive;
-    font-size: 24px;
-    color: #3f6552;
-}
+
 .pinyon { font-family: 'Pinyon Script', cursive; }
 .parisienne { font-family: 'Parisienne', cursive; }
 .italianno { font-family: 'Italianno', cursive; }
