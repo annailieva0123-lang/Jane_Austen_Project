@@ -289,6 +289,32 @@ p{
 }
 
 
+.quote-box {
+  max-width:700px;
+    margin: 50px auto;
+    padding:25px;
+    background-color: #fbf7ee;
+    border-left: 4px solid #578369;
+    text-align: left;
+
+}
+
+.quote-box blockquote {
+  font-family:'Gill Sans','Gill Sans MT', Calibri, "Trebuchet MS", sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 500;
+  color:#1b6528;
+  margin:0;
+
+  
+}
+.quote-author {
+text-align: right;
+font-size: 14px;
+color:#1b6528;
+margin-top: 20px;
+}   
 
 #list {
     max-width: 1000px;
