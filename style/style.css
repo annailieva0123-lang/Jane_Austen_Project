@@ -440,6 +440,16 @@ margin-top: 20px;
  
        transform: translateX(30px) translateY(250px);;
 }
+.other-photo-caption{
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    color:#145420;
+      max-width: 250px;
+}
+
 
 #links ul {
     list-style: circle;
