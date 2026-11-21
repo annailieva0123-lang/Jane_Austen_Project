@@ -214,8 +214,10 @@ p{
     margin: 0 0 60px 0;
     padding: 0;
     overflow: visible;
+    box-sizing: border-box;
+    width: calc(100% - 2px);
+    margin-left: 2px;
 }
-
 
 .background {
     display: block;
@@ -223,8 +225,9 @@ p{
     height: auto;
     max-width: 100%;
      object-fit: cover;
-    object-position: center 10%;;
+    object-position: center 10%;
 }
+
 
 
 .book-carousel {
