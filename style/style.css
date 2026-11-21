@@ -428,7 +428,81 @@ margin-top: 490px;
   align-items: center;
   transform: translateX(200px)  translateY(300px);
 }
+/* Контейнер с фотографией и цитатой */
+.q-decoration-image {
+    display: grid;
+    grid-template-columns: 800px;
+    justify-content: center;
+    margin: 100px auto;
+    position: relative;
+}
 
+/* Фото на заднем плане */
+.quote-image2 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+/* Цитата поверх фотографии */
+.quote-decoration {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Блок цитаты */
+.quote-decoration .quote-box {
+    width: 65%;
+    margin: 0;
+    padding: 45px 30px;
+    background-color: transparent;
+    border: 4px double #987D91;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 3px 12px rgba(40, 61, 50, 0.08);
+    transform: translateX(-70%) translateY(55%);
+}
+
+/* Текст цитаты */
+.quote-box blockquote {
+    font-weight: 500;
+    color: #1b6528;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Автор и источник */
+.quote-author {
+    text-align: right;
+    font-size: 14px;
+    color: #1b6528;
+    margin-top: 12px;
+}
+
+/* Маленькие экраны */
+@media (max-width: 700px) {
+    .q-decoration-image {
+        grid-template-columns: minmax(0, 1fr);
+        width: 95%;
+    }
+
+    .quote-decoration .quote-box {
+        width: 75%;
+    }
+}
 /* Phone version */
 
 @media (max-width: 700px) {
