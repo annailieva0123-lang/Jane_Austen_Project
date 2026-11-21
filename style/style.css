@@ -3,16 +3,41 @@
 body{
 
   background-color: #f7f1e5;
-  padding-top: 70px;
+  padding-top: 56px;
   margin: 0;
 }
-.logo{
-    font-family:"Monotype Corsiva",cursive;
-    font-size: 20px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
 }
-.logo::before {content: "📜 🪶" ; 
-    margin-right:6px;
+
+.logo::before {
+    content: "📜 🪶";
+    font-size: 18px;
+    margin-right: 2px;
 }
+
+.logo-main {
+    font-family:Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    color:  #fbf7ee;
+}
+
+.logo-star {
+    color: #A89572;
+    font-size: 13px;
+}
+
+.logo-sub {
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: #D8CBB5;
+}
+
 header{
 display: flex;
 justify-content: space-between;
@@ -24,8 +49,8 @@ width: 100%;
 box-sizing: border-box;
 padding: 15px 30px;
 font-size: 20px;
-background-color: #f7f1e5;
-border-bottom: 1px solid #594A3C;
+background-color:#987D91;;
+border-bottom: 1px solid #A89572;
 z-index: 1000;
 
 }
@@ -35,17 +60,17 @@ nav{
      flex-wrap: wrap;
 }
 nav a {
-    color: #3f6552;
+    color:  #fbf7ee;
     text-decoration: none;
   font-size: 20px;
 }
 
 nav a:visited {
-    color: #283D32;
+    color:  #fbf7ee;
 }
 
 nav a:hover {
-    color: #6B3035;
+    color: #A89572;
 }
 h1{
     color:  rgba(27, 101, 40, 0.867);
@@ -53,7 +78,7 @@ h1{
     text-align: center;
 }
 h2 {
-    color: #1b6528;
+    color:  #718879;
     font-size: 34px;
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
@@ -61,7 +86,6 @@ h2 {
     margin-bottom: 35px;
     margin-top: 40px;
 }
-
 
 p{
     font-size: 16px;
@@ -93,7 +117,6 @@ p{
     text-align: justify;
 }
 
-
 .film-text h2 {
     text-align: center;
 }
@@ -115,7 +138,7 @@ p{
 .film{
     float:right;
     width: 250px;
-    height:330px;
+    height:340px;
     border-radius: 10%;
     border: 2px solid rgba(27, 101, 40, 0.867);
     margin-left: 40px;
@@ -180,54 +203,52 @@ p{
     margin-bottom: 60px;}
 
 
+/* ГЛАВНЫЙ БАННЕР JANE AUSTEN */
+
 .hero-slider {
-    width: 100%;
-    height: 85vh;
     position: relative;
-    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0 0 60px 0;
+    padding: 0;
+    overflow: visible;
 }
 
-
-/* Фоновая фотография */
 
 .background {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-width: 100%;
+     object-fit: cover;
+    object-position: center 10%;;
 }
 
-
-
-.hero-slider {
-    width: 100%;
-    height: 85vh;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 100px;
-}
-
-/* Обложка книги */
-
-/* Контейнер для карусели */
 
 .book-carousel {
     position: absolute;
-    top: 63%;
-    left: 65%;
-    width: 600px;
-    height: 500px;
+    left: 50%;
+    top: 85%;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 90%;
+    z-index: 5;
 }
 
-
-.book-cover.left {
-    transform: translate(-150%, -50%) scale(0.75);
-    opacity: 0.6;
-    z-index: 1;
+.book-cover {
+    position: absolute;
+    width: 440px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
+    transition: all 1s ease-in-out;
 }
-
-
 
 .book-cover.center {
     transform: translate(-50%, -50%) scale(1.1);
@@ -235,14 +256,17 @@ p{
     z-index: 3;
 }
 
-
+.book-cover.left {
+    transform: translate(-150%, -50%) scale(0.75);
+    opacity: 0.7;
+    z-index: 1;
+}
 
 .book-cover.right {
     transform: translate(50%, -50%) scale(0.75);
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: 2;
 }
-
 
 .slide-content {
     position: absolute;
@@ -268,14 +292,13 @@ p{
     font-size: 20px;
 }
 
-
 .book-cover {
     position: absolute;
-    width: 340px;
+    width: 320px;
     height: 390px;
     object-fit: contain;
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 75%;
     transform: translate(-50%, -50%);
     transition: all 2s ease-in-out;
 }
@@ -289,11 +312,11 @@ p{
     margin: 15px;
 }
 
-/* List of Works */
+
 
 #list {
     max-width: 1000px;
-    margin: 200px auto 60px;
+    margin: 100px auto 25px;
 }
 
 #list table {
@@ -308,7 +331,7 @@ p{
 }
 
 #list th {
-    background-color: #283D32;
+    background-color: #657C68;
     color: #f7f1e5;
     padding: 16px;
     font-weight: normal;
@@ -331,50 +354,111 @@ p{
 #list tr:hover {
     background-color: #eee5d5;
 }
+
 .works-layout {
-    display: grid;
-    grid-template-columns: 1.8fr 1fr 2fr 3fr;
-    gap: 25px;
-    align-items: center;
-    max-width: 1400px;
-    margin: 30px auto;
-    padding-left: 40px; 
-      box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  align-items: center;
+  margin: 10px;
+
 }
 
-.works-table table {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 16px;
+.works-table {
+  grid-column: 1 / -1;
+margin-top: 490px;
 }
 
-.works-photo img,
-.works-photo2 img {
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border: 2px solid #a89572;
-    border-radius: 10%;
+#list .works-table table {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
 }
 
-.works-photo {
-    margin-left: 0px;
+.works-photo img {
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border: 3px solid #289040;
+  border-radius: 10%;
+  display: block;
+ 
 }
-
 .works-photo2 {
-    margin-top: 400px;
-    margin-left: 100px;
+  margin-top: 90px;
 }
+.work-quotes {
+  display: grid;
+  gap: 30px;
+}
+
+.work-quote {
+  background: #fbf7ee;
+  border-left: 3px solid #987D91;
+  padding: 15px;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #283D32;
+  box-shadow: 0 3px 12px rgba(40, 61, 50, 0.08);
+}
+
+.work-quote p {
+  text-align: right;
+  font-size: 13px;
+  font-style: normal;
+  color: #A89572;
+  margin: 12px 0 0;
+}
+.works-first-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 80px;
+  align-items: center;
+  transform: translateY(100px);
+}
+.works-second-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap:80px;
+  align-items: center;
+  transform: translateX(200px)  translateY(300px);
+}
+
+/* Phone version */
+
+@media (max-width: 700px) {
+  .works-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .works-table {
+    grid-column: auto;
+  }
+
+  .works-table table {
+    width: 100%;
+  }
+
+  .works-photo img {
+    height: 260px;
+    margin: 0 auto;
+  }
+}
+
 .other-section {
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 10px auto;
     box-sizing: border-box;
 }
 
 .other-section h2 {
     text-align: center;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .other-layout {
@@ -405,15 +489,25 @@ p{
 .other-photo img,
 .other-photo2 img {
     width: 100%;
-    max-width: 300px;
-    height: 300px;
+    max-width: 400px;
+    height: 350px;
     object-fit: cover;
-    border: 2px solid #a89572;
-    border-radius: 10%;
+    border: 2px solid #145420;
+     border-radius: 10%;
 }
 .other-photo2 {
- 
-       transform: translateX(30px) translateY(250px);;
+   
+  transform: translateX(200px) translateY(450px);
+}
+
+.other-photo-caption{
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    color:#145420;
+      max-width: 250px;
 }
 .other-photo-caption{
     font-family: Georgia, serif;
@@ -457,16 +551,54 @@ p{
 
 footer {
     text-align: center;
-    padding: 25px 20px;
+    padding: 10px 8px;
     border-top: 1px solid #a89572;
-    margin-top: 60px;
+    margin-top: 10px;
+    gap: 10px;
+    background-color:#987D91;
 }
 
 footer p {
-   font-family: 'Allura', cursive;
-    font-size: 20px;
+   font-family: 'Great Vibes' cursive;
+   font-style:italic;
+    font-size: 15px;
     color: #283D32;
     margin: 6px 0;
+}
+.site-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-logo {
+    width: 130px;
+    height: auto;
+    border-radius: 80%;
+}
+
+   @media (max-width: 1100px) {
+
+    .book-carousel {
+        top: 80%;
+    }
+
+    .book-cover {
+        width: 240px;
+        height: 300px;
+    }
+
+    .book-cover.center {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .book-cover.left {
+        transform: translate(-140%, -50%) scale(0.7);
+    }
+
+    .book-cover.right {
+        transform: translate(40%, -50%) scale(0.7);
+    }
+
 }
 
 .pinyon { font-family: 'Pinyon Script', cursive; }
