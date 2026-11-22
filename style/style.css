@@ -559,7 +559,7 @@ margin-top: 490px;
     padding-left: 5px;
 }
 .other-list li::before {
-    content:"📖";
+    content:"〰 ✒️";
     font-size: 14px;
     margin-right: 10px;
 }
